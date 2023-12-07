@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Image Tagger",
+  "description": "An extension to classify images",
+  "version": "1.0",
+  "action": {
+    "default_popup": "./lib/html/main.html",
+    "default_icon": "./lib/img/icon.png"
+  }
+}
