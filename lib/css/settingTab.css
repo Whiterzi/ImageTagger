@@ -1,0 +1,17 @@
+.setting-body .setting-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 25px;
+  width: 300px;
+  padding: 0 5px;
+}
+.setting-body .setting-row input {
+  width: 150px;
+}
+.setting-body .setting-row button {
+  height: 20px;
+}
+
+/*# sourceMappingURL=settingTab.css.map */

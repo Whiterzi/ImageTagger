@@ -6,5 +6,12 @@
   "action": {
     "default_popup": "./lib/html/main.html",
     "default_icon": "./lib/img/icon.png"
-  }
+  },
+  "background": {
+    "service_worker":  "./lib/scripts/background.js"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage"
+  ]
 }
