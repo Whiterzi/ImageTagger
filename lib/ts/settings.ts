@@ -1,3 +1,4 @@
+import { eventMessages } from "./constant.js";
 
 $(window).on("DOMContentLoaded", (event) => {
     initForms();
@@ -10,17 +11,14 @@ function initForms() {
 
   $(pathBtn).on("click", (e) => {
     const inputValue = (pathText as HTMLInputElement).value;
-    if (!inputValue.trim() || localStorage.getItem(inputValue.trim()))
+    if (!inputValue.trim())
       return;
     else
-      localStorage.setItem(inputValue.trim(), inputValue);
-
-    // chrome.tabs.query({active: true, currentWindow: true}, function(tabs: any[]){
-    //   chrome.tabs.sendMessage(tabs[0].id, {action: "open_dialog_box"});  
-    //   });
-    // // chrome.tabs.sendMessage(0, "message");
-    // // chrome.runtime.sendMessage("onSaveField", "hi");
+      sendMessage(eventMessages.created, inputValue);
   })
 }
 
+function sendMessage(message: eventMessages, fieldName?: string) {
+  chrome.runtime.sendMessage(chrome.runtime.id, [message, fieldName]);
+}
 

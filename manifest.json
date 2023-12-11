@@ -8,7 +8,8 @@
     "default_icon": "./lib/img/icon.png"
   },
   "background": {
-    "service_worker":  "./lib/scripts/background.js"
+    "service_worker":  "./lib/scripts/background.js",
+    "type": "module"
   },
   "permissions": [
     "contextMenus",
